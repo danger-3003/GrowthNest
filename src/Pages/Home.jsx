@@ -34,7 +34,7 @@ function Home() {
           <span className="relative">Explore More</span>
         </Link>
       </div>
-      <a href='https://api.whatsapp.com/send?phone=9052315354' target='_blank' className='bg-green-500 fixed bottom-10 right-10 h-10 w-10 p-1 rounded-full flex items-center justify-center animate-bounce hover:cursor-pointer'>
+      <a href='https://api.whatsapp.com/send?phone=9052315354' target='_blank' className='bg-green-500 fixed z-[8] bottom-10 right-10 h-10 w-10 p-1 rounded-full flex items-center justify-center animate-bounce hover:cursor-pointer'>
         <FontAwesomeIcon icon={faWhatsapp} className='text-white text-3xl'/>
       </a>
     </div>

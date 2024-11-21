@@ -27,7 +27,7 @@ function Jobs() {
       name: details.name,
       email: details.email,
       toMail: "naremsumanth@gmail.com",
-      toName: "Growth Nest Solutions",
+      toName: "GrowthNEST Solutions",
       phone: details.mobile,
       subject: `Inquiry about your Services on ${details.visaType}`, // Include inquiryType in subject
       message: `I seek guidance regarding your services for visiting ${details.visitCountry} on ${details.visaType}.`,
@@ -56,7 +56,7 @@ function Jobs() {
       </a>
       <div className='pt-32 sm:pt-40 pb-20 sm:py-40 text-[#fff] flex items-center justify-center flex-col gap-5 w-full' style={{background:`linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(${Bg})`,backgroundPosition:"center",backgroundSize:"cover"}}>
         <p className='font-extrabold text-center text-2xl sm:text-3xl md:text-4xl'>Jobs</p>
-        <p className='text-sm md:text-lg font-light sm:font-semibold w-[80vw] md:w-[65vw] text-center -mb-5'>Growth Nest Solutions is a leading job portal that simplifies job searching, efficiently connecting workers and employees with diverse national and international opportunities.</p>
+        <p className='text-sm md:text-lg font-light sm:font-semibold w-[80vw] md:w-[65vw] text-center -mb-5'>GrowthNEST Solutions is a leading job portal that simplifies job searching, efficiently connecting workers and employees with diverse national and international opportunities.</p>
       </div>
       <div className='flex items-center justify-center flex-col mt-10'>
         <div className='flex items-center justify-center flex-col sm:flex-row gap-5 md:gap-10 px-5 lg:px-20'>

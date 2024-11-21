@@ -22,7 +22,7 @@ function Contact() {
       name: details.name,
       email: details.email,
       toMail: "naremsumanth@gmail.com",
-      toName: "Growth Nest Solutions",
+      toName: "GrowthNEST Solutions",
       phone: details.mobile,
       subject: `Inquiry about your Services on ${details.visaType}`, // Include inquiryType in subject
       message: `I seek guidance regarding your services for visiting ${details.visitCountry} on ${details.visaType}.`,

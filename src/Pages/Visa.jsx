@@ -36,7 +36,8 @@ function Visa(){
       if(res)
       {
         setDisable(false);
-        alert("Form Submitted Successfully")
+        alert("Form Submitted Successfully");
+        setDetails({details,name:"",email:"",number:"",visitCountry:"",visaType:"VisitingVisa"});
       }
     })
     .catch((err)=>{console.log(err)});
@@ -51,9 +52,9 @@ function Visa(){
       <a href='https://api.whatsapp.com/send?phone=9052315354' target='_blank' className='bg-green-500 fixed bottom-10 right-10 h-10 w-10 p-1 rounded-full flex items-center justify-center animate-bounce hover:cursor-pointer'>
         <FontAwesomeIcon icon={faWhatsapp} className='text-white text-3xl'/>
       </a>
-      <div className='pt-40 pb-20 sm:py-40 text-[#fff] flex items-center justify-center flex-col gap-5 w-full' style={{background:`linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(${Bg})`,backgroundPosition:"center",backgroundSize:"cover"}}>
+      <div className='pt-32 sm:pt-40 pb-20 sm:py-40 text-[#fff] flex items-center justify-center flex-col gap-5 w-full' style={{background:`linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(${Bg})`,backgroundPosition:"center",backgroundSize:"cover"}}>
         <p className='font-extrabold text-center text-2xl sm:text-3xl md:text-4xl'>Visa & Immigration</p>
-        <p className='text-sm md:text-lg font-light sm:font-semibold w-[60vw] text-center -mb-5'>We assure reliable process and help to send you to your dream destination to chase your aspirations of going overseas for whatever reason.</p>
+        <p className='text-sm md:text-lg font-light sm:font-semibold w-[80vw] md:w-[65vw] text-center -mb-5'>We assure reliable process and help to send you to your dream destination to chase your aspirations of going overseas for whatever reason.</p>
       </div>
       <div className='flex items-center justify-center flex-col mt-10'>
         <div className='flex items-center justify-center flex-col sm:flex-row gap-5 md:gap-10 px-5 lg:px-20'>
@@ -83,25 +84,25 @@ function Visa(){
           <p className='text-2xl font-bold text-center md:text- w-full'>Contact Us - </p>
           <div>
             <form action="" onSubmit={handleSubmit}>  
-              <div className='w-60 sm:w-72 my-2'>
+              <div className={`${window.innerWidth <350 ?"w-[80vw]":"w-72"} sm:w-72 md:w-80 my-2`}>
                 <p className='font-semibold text-lg'>Name <span className='text-red-600'>*</span></p>
-                <input type="text" placeholder='Your Name' value={details.name} required name="name" onChange={(e)=>{setDetails({...details,name:e.target.value})}} className='border-b-2 border-[#d5a64e] outline-none bg-white rounded-sm w-full px-2 py-1 text-slate-900'/>
+                <input type="text" placeholder='Your Name' value={details.name} required name="name" onChange={(e)=>{setDetails({...details,name:e.target.value})}} className='border-b-2 border-[#d5a64e] outline-none bg-white shadow-md shadow-slate-400 rounded-sm w-full px-2 py-1 text-slate-900'/>
               </div>
-              <div className='w-60 sm:w-72 my-2'>
+              <div className={`${window.innerWidth <350 ?"w-[80vw]":"w-72"} sm:w-72 md:w-80 my-2`}>
                 <p className='font-semibold text-lg'>Email <span className='text-red-600'>*</span></p>
-                <input type="email"  placeholder='Your Email' value={details.email} required name="email" onChange={(e)=>{setDetails({...details,email:e.target.value})}} className='border-b-2 border-[#d5a64e] outline-none bg-white rounded-sm w-full px-2 py-1 text-slate-900'/>
+                <input type="email"  placeholder='Your Email' value={details.email} required name="email" onChange={(e)=>{setDetails({...details,email:e.target.value})}} className='border-b-2 border-[#d5a64e] outline-none bg-white shadow-md shadow-slate-400 rounded-sm w-full px-2 py-1 text-slate-900'/>
               </div>
-              <div className='w-60 sm:w-72 my-2'>
+              <div className={`${window.innerWidth <350 ?"w-[80vw]":"w-72"} sm:w-72 md:w-80 my-2`}>
                 <p className='font-semibold text-lg'>Mobile Number <span className='text-red-600'>*</span></p>
-                <input type="number" placeholder='Your mobile number' value={details.number} required name="mobile" onChange={(e)=>{setDetails({...details,number:e.target.value})}} className='border-b-2 border-[#d5a64e] outline-none bg-white rounded-sm w-full px-2 py-1 text-slate-900'/>
+                <input type="number" placeholder='Your mobile number' value={details.number} required name="mobile" onChange={(e)=>{setDetails({...details,number:e.target.value})}} className='border-b-2 border-[#d5a64e] outline-none bg-white shadow-md shadow-slate-400 rounded-sm w-full px-2 py-1 text-slate-900'/>
               </div>
-              <div className='w-60 sm:w-72 my-2'>
+              <div className={`${window.innerWidth <350 ?"w-[80vw]":"w-72"} sm:w-72 md:w-80 my-2`}>
                 <p className='font-semibold text-lg'>Country to Visit <span className='text-red-600'>*</span></p>
-                <input type="text" placeholder='Desired Country' required value={details.visitCountry} name="country" onChange={(e)=>{setDetails({...details,visitCountry:e.target.value})}} className='border-b-2 border-[#d5a64e] outline-none bg-white rounded-sm w-full px-2 py-1 text-slate-900'/>
+                <input type="text" placeholder='Desired Country' required value={details.visitCountry} name="country" onChange={(e)=>{setDetails({...details,visitCountry:e.target.value})}} className='border-b-2 border-[#d5a64e] outline-none bg-white shadow-md shadow-slate-400 rounded-sm w-full px-2 py-1 text-slate-900'/>
               </div>
-              <div className='w-60 sm:w-72 my-2'>
+              <div className={`${window.innerWidth <350 ?"w-[80vw]":"w-72"} sm:w-72 md:w-80 my-2`}>
                 <p className='font-semibold text-lg'>Visa <span className='text-red-600'>*</span></p>
-                <select placeholder="Visa type" name="visa" value={details.visaType} onChange={(e)=>{setDetails({...details,visaType:e.target.value})}} className='border-b-2 border-[#d5a64e] outline-none bg-white rounded-sm w-full px-2 py-1 text-slate-900'>
+                <select placeholder="Visa type" name="visa" value={details.visaType} onChange={(e)=>{setDetails({...details,visaType:e.target.value})}} className='border-b-2 border-[#d5a64e] outline-none bg-white shadow-md shadow-slate-400 rounded-sm w-full px-2 py-1 text-slate-900'>
                   <option value="VisitingVisa" className='w-full'>Visiting VISA</option>
                   <option value="WorkingVisa" className='w-full'>Working VISA</option>
                   <option value="StudentVisa" className='w-full'>Student VISA</option>
@@ -109,7 +110,7 @@ function Visa(){
                 </select>
               </div >
               <div className='flex justify-center mt-5'>
-                <button type="submit" disabled={disable} className='bg-[#000] hover:bg-zinc-900 rounded-sm px-6 py-1 text-[#d5a64e] transition-all duration-300'>Submit</button>
+                <button type="submit" disabled={disable} className='bg-[#000] hover:bg-zinc-900 rounded-sm px-6 py-1 text-[#fff] font-semibold shadow-md shadow-slate-400 transition-all duration-300'>Submit</button>
               </div>
             </form>
           </div>

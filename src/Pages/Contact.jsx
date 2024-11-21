@@ -32,7 +32,8 @@ function Contact() {
       if(res)
       {
         setDisable(false);
-        alert("Form Submitted Successfully")
+        alert("Form Submitted Successfully");
+        setDetails({details,name:"",email:"",number:"",visitCountry:"",visaType:"VisitingVisa"});
       }
     })
     .catch((err)=>{console.log(err)});
@@ -45,25 +46,25 @@ function Contact() {
         <p className='text-2xl font-bold text-center md:text- w-full'>Contact Us - </p>
         <div>
           <form action="" onSubmit={handleSubmit}>  
-            <div className='w-60 sm:w-72 my-2'>
+            <div className={`${window.innerWidth <350 ?"w-[80vw]":"w-72"} sm:w-72 md:w-80 my-2`}>
               <p className='font-semibold text-lg'>Name <span className='text-red-600'>*</span></p>
-              <input type="text" placeholder='Your Name' value={details.name} required name="name" onChange={(e)=>{setDetails({...details,name:e.target.value})}} className='border-b-2 border-[#d5a64e] outline-none bg-slate-200 rounded-sm w-full px-2 py-1 text-slate-900'/>
+              <input type="text" placeholder='Your Name' value={details.name} required name="name" onChange={(e)=>{setDetails({...details,name:e.target.value})}} className='border-b-2 border-[#d5a64e] outline-none bg-white shadow-md shadow-slate-400 rounded-sm w-full px-2 py-1 text-slate-900'/>
             </div>
-            <div className='w-60 sm:w-72 my-2'>
+            <div className={`${window.innerWidth <350 ?"w-[80vw]":"w-72"} sm:w-72 md:w-80 my-2`}>
               <p className='font-semibold text-lg'>Email <span className='text-red-600'>*</span></p>
-              <input type="email"  placeholder='Your Email' value={details.email} required name="email" onChange={(e)=>{setDetails({...details,email:e.target.value})}} className='border-b-2 border-[#d5a64e] outline-none bg-slate-200 rounded-sm w-full px-2 py-1 text-slate-900'/>
+              <input type="email"  placeholder='Your Email' value={details.email} required name="email" onChange={(e)=>{setDetails({...details,email:e.target.value})}} className='border-b-2 border-[#d5a64e] outline-none bg-white shadow-md shadow-slate-400 rounded-sm w-full px-2 py-1 text-slate-900'/>
             </div>
-            <div className='w-60 sm:w-72 my-2'>
+            <div className={`${window.innerWidth <350 ?"w-[80vw]":"w-72"} sm:w-72 md:w-80 my-2`}>
               <p className='font-semibold text-lg'>Mobile Number <span className='text-red-600'>*</span></p>
-              <input type="number" placeholder='Your mobile number' value={details.number} required name="mobile" onChange={(e)=>{setDetails({...details,number:e.target.value})}} className='border-b-2 border-[#d5a64e] outline-none bg-slate-200 rounded-sm w-full px-2 py-1 text-slate-900'/>
+              <input type="number" placeholder='Your mobile number' value={details.number} required name="mobile" onChange={(e)=>{setDetails({...details,number:e.target.value})}} className='border-b-2 border-[#d5a64e] outline-none bg-white shadow-md shadow-slate-400 rounded-sm w-full px-2 py-1 text-slate-900'/>
             </div>
-            <div className='w-60 sm:w-72 my-2'>
+            <div className={`${window.innerWidth <350 ?"w-[80vw]":"w-72"} sm:w-72 md:w-80 my-2`}>
               <p className='font-semibold text-lg'>Country to Visit <span className='text-red-600'>*</span></p>
-              <input type="text" placeholder='Desired Country' required value={details.visitCountry} name="country" onChange={(e)=>{setDetails({...details,visitCountry:e.target.value})}} className='border-b-2 border-[#d5a64e] outline-none bg-slate-200 rounded-sm w-full px-2 py-1 text-slate-900'/>
+              <input type="text" placeholder='Desired Country' required value={details.visitCountry} name="country" onChange={(e)=>{setDetails({...details,visitCountry:e.target.value})}} className='border-b-2 border-[#d5a64e] outline-none bg-white shadow-md shadow-slate-400 rounded-sm w-full px-2 py-1 text-slate-900'/>
             </div>
-            <div className='w-60 sm:w-72 my-2'>
+            <div className={`${window.innerWidth <350 ?"w-[80vw]":"w-72"} sm:w-72 md:w-80 my-2`}>
               <p className='font-semibold text-lg'>Visa <span className='text-red-600'>*</span></p>
-              <select placeholder="Visa type" name="visa" value={details.visaType} onChange={(e)=>{setDetails({...details,visaType:e.target.value})}} className='border-b-2 border-[#d5a64e] outline-none bg-slate-200 rounded-sm w-full px-2 py-1 text-slate-900'>
+              <select placeholder="Visa type" name="visa" value={details.visaType} onChange={(e)=>{setDetails({...details,visaType:e.target.value})}} className='border-b-2 border-[#d5a64e] outline-none bg-white shadow-md shadow-slate-400 rounded-sm w-full px-2 py-1 text-slate-900'>
                 <option value="VisitingVisa" className='w-full'>Visiting VISA</option>
                 <option value="WorkingVisa" className='w-full'>Working VISA</option>
                 <option value="StudentVisa" className='w-full'>Student VISA</option>
@@ -71,7 +72,7 @@ function Contact() {
               </select>
             </div >
             <div className='flex justify-center mt-5'>
-              <button type="submit" disabled={disable} className='bg-[#000] hover:bg-zinc-900 rounded-sm px-6 py-1 text-[#d5a64e] transition-all duration-300'>Submit</button>
+              <button type="submit" disabled={disable} className='bg-[#000] hover:bg-zinc-900 rounded-sm px-6 py-1 text-[#fff] font-semibold shadow-md shadow-slate-400 transition-all duration-300'>Submit</button>
             </div>
           </form>
         </div>

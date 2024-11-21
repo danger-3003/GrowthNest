@@ -29,13 +29,13 @@ function About() {
       <div className='flex items-center justify-center flex-col'>
         <div className='flex items-center justify-center flex-col sm:flex-row'>
           <div className='sm:basis-[70%] mx-[5vw] mb-10 sm:mr-0 md:mx-10 flex items-center sm:items-start flex-col'>
-            <div className='text-center sm:text-left text-2xl sm:text-3xl md:text-4xl font-extrabold mb-5' data-aos="fade-up" data-aos-once={true}>Welcome to Growth&nbsp;Nest&nbsp;Solutions</div>
+            <div className='text-center sm:text-left text-2xl sm:text-3xl md:text-4xl font-extrabold mb-5' data-aos="fade-up" data-aos-once={true}>Welcome to GrowthNEST&nbsp;Solutions</div>
             <div className='flex items-start flex-row'>
               <div className='h-0.5 w-40 sm:w-60 bg-[#d5a64e] mb-3' data-aos="fade-up" data-aos-once={true}></div>
               <div className='h-0.5 w-10 bg-[#d5a64e] mx-2 mb-3' data-aos="fade-up" data-aos-once={true}></div>
               <div className='h-0.5 w-5 bg-[#d5a64e]  mb-3' data-aos="fade-up" data-aos-once={true}></div>
             </div>
-            <p className='text-base md:text-lg text-center sm:text-left font-normal md:leading-8 mt-4' data-aos="fade-up" data-aos-once={true}>Welcome to Growth Nest Solutions, your trusted partner in pursuing education and
+            <p className='text-base md:text-lg text-center sm:text-left font-normal md:leading-8 mt-4' data-aos="fade-up" data-aos-once={true}>Welcome to GrowthNEST Solutions, your trusted partner in pursuing education and
               employment opportunities abroad. Our mission is to provide comprehensive consultancy services,
               guiding students and professionals towards achieving their academic and career aspirations on a
               global stage. 

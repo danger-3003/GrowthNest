@@ -26,7 +26,7 @@ function Jobs() {
     const data = {
       name: details.name,
       email: details.email,
-      toMail: "naremsumanth@gmail.com",
+      toMail: "growthnestsolutions@gmail.com",
       toName: "GrowthNEST Solutions",
       phone: details.mobile,
       subject: `Inquiry about your Services on ${details.visaType}`, // Include inquiryType in subject
